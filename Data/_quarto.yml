@@ -1,0 +1,65 @@
+# Book Guide: https://quarto.org/docs/books/
+
+project:
+  type: book             # Keep it
+  output-dir: _book      # Keep it
+
+
+# Book Outline 
+book:
+  title: "Book title"                           # Book official title (pdf, html)
+  author: "Author's name"                       # Author's name (Optional)
+  page-footer:                                  # Footer (Optional)
+    left: |
+      Data Science for Geospatial Analysis
+    right: | 
+      Gyeongkuk National University
+      
+  reader-mode: true                             # Turn on reader-mode (Optional: ture or false)
+  cover-image: cover.png                        # Book cover image (Optional)
+  favicon: cover.png                            # Book web address image (Optional)
+  site-url: https://ljwook92.github.io/RS       # Book website address (Optional)
+  repo-url: https://github.com/Ljwook92/RS      # Report board (Optional)
+  repo-branch: main                             # If repo-url is working, keep these options
+  repo-actions: [issue]                   
+
+# Book Contents
+  navbar:                                       # Book contents
+    title: Geospatial (Remote Sensing)          # Book title on top of book
+  chapters:
+    - part: index.qmd                           # Part -> Chapter (index.qmd usually be here)
+    
+    - part: Giovanni.qmd
+      chapters:                                 # Chapters -> Sub-chapters
+        - Giovanni_1.qmd
+        - Giovanni_2.qmd
+        
+    - part: Satelite.qmd
+      chapters: 
+        - Satellite_1.qmd
+        - Satellite_2.qmd
+        - Satellite_3.qmd
+        
+    - part: Radar.qmd
+      chapters: 
+        - Radar_1.qmd
+        - Radar_2.qmd
+
+# Book Format Global Settings
+format:
+  html:
+    toc: true                                 # Optional
+    number-sections: true                     # Optional
+    
+    # Keep at least one theme (https://quarto.org/docs/output-formats/html-themes.html)
+    theme:                    
+      light: flatly                           # Light mode's theme (Optional)
+      dark: darkly                            # Dark mode's theme (Optional)
+      
+    author-meta: Jung-In Seo, Jeong-Wook Lee  # Autor info. (Optional)
+    
+    smooth-scroll: true
+    toc-location: right
+    highlight-style: pygments          # https://quarto.org/docs/output-formats/html-code.html#highlighting
+    callout-appearance: simple         # Notice Box Style (Optional)    
+                                       # https://quarto.org/docs/authoring/callouts.html
